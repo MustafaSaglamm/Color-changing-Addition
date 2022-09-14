@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <style>
+        body{
+            margin-top: 120px;
+            background-image: url(../toplamaislemi/thumb-1920-77840.jpeg);
+            color: #f4f4f4;
+            font-size: 27px;
+            text-align: center;
+        }
+        label{
+            display: block;
+            margin-bottom: 15px;
+            
+        }
+        div{
+            font-size: 40px;
+            padding-top: 18px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Addition</h1>
+
+<form>
+<label>
+    Number1 : <input type="text" id="s1">
+</label>
+<label>
+    Number2 : <input type="text" id="s2"> 
+</label>
+<input type="button" value="Addition" id="calculate">
+</form>
+
+<div id="Result"></div>
+
+
+<script>
+
+var Number1=document.getElementById("s1");
+var Number2=document.getElementById("s2");
+var HesapBtn=document.getElementById("calculate");
+var Result=document.getElementById("Result");
+
+HesapBtn.onclick=function(){
+    var toplam= Number(Number1.value) + Number(Number2.value);
+    Result.innerHTML=toplam;
+
+
+     if (toplam < "99")
+            {
+                document.getElementById("Result").style.color = "yellow";
+            }
+            else if (toplam > "99" && toplam < "999")
+            {
+                document.getElementById("Result").style.color = "orange";
+            }
+            else if (toplam > "999" && toplam < "9999")
+            {
+                document.getElementById("Result").style.color = "brown";
+            }
+            else {
+                document.getElementById("Result").style.color = "red";
+            }
+
+
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
